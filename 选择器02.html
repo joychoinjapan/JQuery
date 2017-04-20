@@ -7,6 +7,9 @@
         .pink{
             background-color: pink;
         }
+        .blue{
+            background-color: aquamarine;
+        }
     </style>
     <script src="jquery.min.js"></script>
 </head>
@@ -20,11 +23,22 @@
 <div id="d3">
     <span>Hello JQuery</span>
 </div>
+<div>
+    <span>Hello JQuery</span>
+</div>
 <button id="b1">add bg to the span of div d3</button>
+<button id="b2">add bg to first</button>
+<button id="b3">add bg to last</button>
 <script>
     $(function () {
         $("#b1").click(function () {
             $("div#d3 span").addClass("pink");
+        });
+        $("#b2").click(function(){
+           $("div:first").addClass("blue");
+        });
+        $("#b3").click(function () {
+            $("div:last").addClass("blue");
         });
     });
 </script>

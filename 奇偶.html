@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <span>Hello JQuery 0</span>
+</div>
+<div>
+    <span>Hello JQuery 1</span>
+</div>
+<div>
+    <span>Hello JQuery 2</span>
+</div>
+<div>
+    <span>Hello JQuery 3</span>
+</div>
+<div>
+    <span>Hello JQuery 4</span>
+</div>
+<div>
+    <span>Hello JQuery 5</span>
+</div>
+
+
+<button id="b1">切换奇数背景色</button>
+<button id="b2">切换偶数背景色</button>
+
+
+<script>
+    $(function () {
+        $("#b1").click(function () {
+            $("div:odd").toggleClass("pink");
+        });
+        $("#b2").click(function () {
+            $("div:even").toggleClass("green");
+        });
+    });
+</script>
+</body>
+</html>
