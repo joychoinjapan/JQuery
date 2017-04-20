@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .pink{
+            background-color: pink;
+        }
+        .blue{
+            background-color: cornflowerblue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>
+    Hello JQuery
+</div>
+<div id="d1">
+    Hello JQuery
+</div>
+<div id="d2">
+    Hello JQuery
+</div>
+<div id="d3">
+    Hello JQuery
+</div>
+<div class="last">
+    Hello JQuery gogogo
+</div>
+<p>
+    选择器：
+    1.元素 $("tagName")
+    2.id $("#id")
+    3.class $("className")
+</p>
+<button id="b1">给所有的div元素增加背景色</button>
+<button id="b2">给id为d1的元素增加背景色</button>
+<button id="b3">add backgroundcolor to class last</button>
+<script>
+    $(function () {
+        $("#b1").click(function () {
+            $("div").addClass("pink");
+        });
+    });
+    $(function () {
+        $("#b2").click(function () {
+            $("#d1").addClass("blue");
+        });
+    });
+    $(function () {
+        $("#b3").click(function () {
+            $(".last").addClass("yellow");
+        })
+    })
+</script>
+</body>
+</html>
