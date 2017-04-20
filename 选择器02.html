@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pink{
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div class="d">
+    <span>Hello JQuery</span>
+</div>
+<div class="d">
+    <span>Hello JQuery</span>
+</div>
+<div id="d3">
+    <span>Hello JQuery</span>
+</div>
+<button id="b1">add bg to the span of div d3</button>
+<script>
+    $(function () {
+        $("#b1").click(function () {
+            $("div#d3 span").addClass("pink");
+        });
+    });
+</script>
+</body>
+</html>
