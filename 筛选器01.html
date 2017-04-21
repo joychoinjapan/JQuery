@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个和最后一个</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#b1").click(function () {
+                $("div").first().toggleClass("pink");
+            });
+            $("#b2").click(function () {
+                $("div").last().toggleClass("pink");
+            });
+            $("#b3").click(function () {
+                $("div").eq(3).toggleClass("pink");
+            });
+        });
+    </script>
+    <style>
+        .pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<button id="b1">切换第1个div背景色</button>
+<button id="b2">切换最后一个div背景色</button>
+<button id="b3">切换第4个div背景色</button>
+<div>
+    <span>Hello JQuery 1</span>
+</div>
+<div>
+    <span>Hello JQuery 2</span>
+</div>
+<div>
+    <span>Hello JQuery 3</span>
+</div>
+<div>
+    <span>Hello JQuery 4</span>
+</div>
+<div>
+    <span>Hello JQuery 5</span>
+</div>
+<div>
+    <span>Hello JQuery 6</span>
+</div>
+</body>
+</html>
