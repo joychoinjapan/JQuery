@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父亲 祖先</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                $("#currentDiv").parent().toggleClass("b");
+            })
+            $("#b2").click(function () {
+                $("#currentDiv").parents().toggleClass("b");
+            })
+        })
+    </script>
+    <style>
+        div{
+            padding:20px;
+        }
+        div#grandParentDiv{
+            background-color: pink;
+        }
+        div#parentDiv{
+            background-color: green;
+        }
+        div#currentDiv{
+            background-color: red;
+        }
+        .b{
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+<button id="b1">改变当前元素的parent的边框</button>
+<button id="b2">改变当前元素的parents的边框</button>
+<div id="grandParentDiv">
+     祖先元素
+    <div id="parentDiv">父元素
+        <div id="currentDiv">当前元素</div>
+    </div>
+</div>
+</body>
+</html>

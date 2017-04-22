@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>儿子后代</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                    $("#currentDiv").children().toggleClass("b")
+                }
+            );
+            $("#b2").click(function () {
+                    $("#currentDiv").find("div").toggleClass("b")
+                }
+            );
+            $("#b3").click(function () {
+                $(".childrenDiv").siblings().toggleClass("b")
+            });
+
+        })
+    </script>
+    <style>
+        div{padding: 20px;}
+        .grandChildrenDiv{
+            background-color: pink;
+        }
+        .childrenDiv{
+            background-color: green;
+            margin: 10px;
+        }
+        div#currentDiv{
+            background-color: red;
+        }
+        .b{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<button id="b1">改变children（）的边框</button>
+<button id="b2">改变find（）的边框</button>
+<button id="b3">筛选children的同胞兄弟</button>
+<div id="currentDiv">
+    当前元素
+    <div class="childrenDiv">
+        儿子元素1
+        <div class="grandChildrenDiv">
+            后代元素1
+        </div>
+    </div>
+    <div>
+        儿子元素2
+        <div class="grandChildrenDiv">
+            后代元素2
+        </div>
+
+    </div>
+    <div>
+        儿子元素3
+        <div class="grandChildrenDiv">
+            后代元素2
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
