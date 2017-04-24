@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#message1").html("页面加载成功");
+        })
+        $(function () {
+            $("#img").load(function () {
+                $("#message2").html("图片加载成功")
+            })
+        })
+        $(function () {
+
+                $("#b").click(function () {
+                    $("#message").html("单击按钮")
+                })
+                $("#b").ondblclick(function () {
+                    $("#message").html("双击按钮")
+                })
+
+        })
+    </script>
+</head>
+<body>
+<div id="message1"></div>
+<div id="message2"></div>
+<img id="img" src="timg.jpeg">
+<div id="message3"></div>
+<button id="b">测试单机和双击</button>
+</body>
+</html>

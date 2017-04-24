@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The diffrence of prop and attr</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                alert("game的属性是："+$("#c").attr("game"))
+            })
+            $("#b2").click(function () {
+                alert("game的属性是："+$("#c").prop("game"))
+            })
+            $("#b3").click(function () {
+                alert("checked的属性是"+$("#c").attr("checked"))
+            })
+            $("#b4").click(function () {
+                alert("checked的属性是"+$("#c").prop("checked"))
+            })
+        })
+    </script>
+</head>
+<body>
+<style>
+    button{
+        display:block;
+    }
+</style>
+<p>对于自定义属性，attr能获取，对于表单属性，使用prop</p>
+<button id="b1">通过attr获取自定义属性 game</button>
+<button id="b2">通过prop获取自定义属性 game</button>
+<button id="b3">通过attr获取 checked属性</button>
+<button id="b4">通过prop获取 checked属性</button>
+
+<br>
+<br>
+<input type="checkbox" id="c" game="LOL" checked="checked">
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#b").click(function () {
+                $("#message3").html("单击按钮")
+            })
+            $("#b").dblclick(function () {
+                $("#message3").html("双击按钮")
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div id="message3"></div>
+<button id="b">测试单机和双击</button>
+</body>
+</html>

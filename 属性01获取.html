@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                alert("align的属性是"+$("#h").attr("align"))
+            })
+            $("#b2").click(function () {
+                alert("game属性是"+$("#h").attr("game"))
+            })
+            $("#b3").click(function () {
+                $("#h").attr("align","right")
+            })
+            $("#b4").click(function () {
+                $("#h").removeAttr("align")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="b1">获取align属性</button>
+<button id="b2">获取自定义属性</button>
+<button id="b3">修改align的属性为right</button>
+<button id="b4">删除align属性</button>
+<br>
+<br>
+<h1 id="h" align="center" game="LOL">居中标题</h1>
+</body>
+</html>

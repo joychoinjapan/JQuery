@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            var div=$("#d");
+            $("#b1").click(function () {
+                div.fadeIn();
+            })
+            $("#b2").click(function () {
+                div.fadeOut();
+            })
+            $("#b3").click(function () {
+                div.fadeToggle();
+            })
+            $("#b4").click(function () {
+                div.fadeIn(2000);
+            })
+            $("#b5").click(function () {
+                div.fadeOut(2000);
+            })
+            $("#b6").click(function () {
+                div.fadeToggle(2000);
+            })
+            $("#b7").click(function () {
+                $("#d1").fadeTo("slow",0.2);
+                $("#d2").fadeTo("slow",0.5);
+                $("#d3").fadeTo("slow",0.8);
+            })
+        })
+    </script>
+    <style>
+        button{
+            display: block;
+        }
+        table div{
+            border:solid 1px gray;
+            background-color: pink;
+            width: 80px;
+            height: 50px;
+        }
+        div{
+            border:solid 1px gray;
+            background-color: pink;
+            width:300px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<button id="b2">淡出</button>
+<button id="b1">淡入</button>
+<button id="b3">淡入淡出切换</button>
+<button id="b5">延时淡出</button>
+<button id="b4">延时淡入</button>
+<button id="b6">延时滑淡入淡出切换</button>
+
+<button id="b7">fadeTo</button>
+
+<br>
+<br>
+<div id="d">用于演示效果的DIV</div>
+<table>
+    <tr>
+        <td><div id="d1">用于演示fadeTo 20%</div></td>
+        <td><div id="d2">用于演示fadeTo 50%</div></td>
+        <td><div id="d3">用于演示fadeTo 80%</div></td>
+    </tr>
+</table>
+</body>
+</html>

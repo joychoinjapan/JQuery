@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            var div=$("#d");
+            $("#b1").click(function () {
+                div.animate({left:'100px'},2000);
+                div.animate({left:'0px',top:"50px"},2000);
+                div.animate({top:'0px'},2000,function () {
+                    alert("动画演示结束");
+                })
+            })
+        })
+    </script>
+    <style>
+        button{
+            display: block;
+        }
+        div{
+            background-color: pink;
+            width: 200px;
+            height:80px;
+            font-size: 12px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<button id="b1">自定义动画,结束提示后会有提示框</button>
+<br><br>
+<div id="d">
+    <p>1. 向右移动100px</p>
+    <p>2. 向左下移动50px</p>
+    <p>3. 回到原位</p>
+</div>
+</body>
+</html>
