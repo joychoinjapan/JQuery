@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>submit</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#form").submit(function () {
+                alert("提交账号密码")
+            })
+        })
+    </script>
+</head>
+<body>
+<form id="form" action="http://how2j.cn/study/login.jsp">
+    user ID:<input name="name" type=""><br>
+    password:<input name="password" type=""><br>
+    <input type="submit" value="登陆">
+</form>
+
+</body>
+</html>

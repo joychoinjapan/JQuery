@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>focus blur change</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#in01").focus(function () {
+                $(this).val("获取了焦点")
+            });
+            $("#in02").blur(function () {
+                $(this).val("失去了焦点")
+            });
+            $("#input1").change(function () {
+                var text=$(this).val();
+                $("#message").html("input1的内容变为了"+text);
+            })
+        })
+    </script>
+</head>
+<body>
+<input id="in01" type="text">
+<input id="in02" type="text">
+
+<br>
+<div id="message"></div>
+<input id="input1" type="text"><br>
+<input size="50" id="inputs" type="text" value="只有当input1失去焦点的时候，才会触发change事件">
+
+</body>
+</html>

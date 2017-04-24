@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>触发事件，文档加载后就触发dblclick双击事件</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b").on("click",function () {
+                $("#message").html("单击按钮");
+            });
+            $("#b").on("dblclick",function () {
+                $("#message").html("双击按钮");
+            });
+            $("#b").trigger("dblclick");
+        })
+    </script>
+</head>
+<body>
+<div id="message"></div>
+<button id="b">测试单击和双击</button>
+</body>
+</html>
